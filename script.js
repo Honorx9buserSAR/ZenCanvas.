@@ -102,7 +102,7 @@ function startGame() {
     }
   }
 
-  canvas.addEventListener('mousemove', (event) => {
+  gameCanvas.addEventListener('mousemove', (event) => {
     for (let i = 0; i < 5; i++) {
       particles.push(new Particle(event.x, event.y));
     }
@@ -119,7 +119,7 @@ function startGame() {
   }
 
   function animate() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.clearRect(0, 0, gameCanvas.width, gameCanvas.height);
     handleParticles();
     requestAnimationFrame(animate);
   }
